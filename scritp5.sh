@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 read ​-p​ ​'Escriba una ruta: '​ ruta ;
 read ​-p​ ​'Introduce archivo: '​ archivo
 if​ test ​-e​ ​$ruta​ | test ​-e​ ​$archivo​ | [ ​"$#"​ = ​"2"​ ]
