@@ -1,5 +1,8 @@
 #! /bin/bash
 #clear
+date
+echo "---------------------------------------------"
+echo "Jacobo Azmani"
 read -p "Escriba el nombre de fichero o directorio: " archivo
 if [ -d $archivo ]; then
     echo $archivo" es un directorio."

@@ -1,13 +1,15 @@
 #!/bin/bash
 clear
-read ​-p​ ​'Escriba una ruta: '​ ruta ;
-read ​-p​ ​'Introduce archivo: '​ archivo
-if​ test ​-e​ ​$ruta​ | test ​-e​ ​$archivo​ | [ ​"$#"​ = ​"2"​ ]
-then
-    echo​ ​'La ruta especificada existe y el número de argumentos es: '​ ​$# sleep 1s
-    echo​ ​' Información del fichero/directorio: '
-    ls​ ​-l​ ​$ruta
+if [ $# = 2 ]; then
+    if test -d $HOME/$1; then
+        if test -e $HOME/$1/$2; then
+            file $HOME/$1/$2
+        else
+            echo "No existe el fichero"
+        fi
+    else
+        echo "No existe el directorio"
+    fi
 else
-    echo​ ​'Error. Comprueba la archivo'​ ​$archivo​ ​', ruta'​ ​$ruta​ ​'Recuerda que el número máximo de argumentos es 2.'
+    echo "No ha pasado el número correcto de argumentos"
 fi
-cat​ ​$archivo

@@ -2,6 +2,9 @@
 clear
 #Crea un script que realice copias de seguridad en el directorio copias (empaquetadas y comprimidas) 
 #de un directorio predeterminado introducido por teclado.
+date
+echo "---------------------------------------------"
+echo "Jacobo Azmani"
 read -p "Introduzca directorio para copia de seguridad: " COPIAS
 DATE=$(date +%Y-%m-%d-%H)
 BACKUP="/Users/mac/Documents/GitHub/bash_script/copias"
