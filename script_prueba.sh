@@ -1,5 +1,6 @@
 #! /bin/bash
 clear
+# date muestra la fecha y hora acutal
 date
 echo "-----------------"
 echo "Jacobo Azmani ASIR"
