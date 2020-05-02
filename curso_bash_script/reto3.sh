@@ -5,13 +5,12 @@ clear
 #En la comprobación usaremos un bucle while
 #En la creación usaremos un bucle for
 
-
 #Lista con directorios
 dirs=(/curso_bas_script /prueba /nuevo)
 
 case $1 in
     
-    [Cc]heck) # Si elegimos check le diremos que chekee el directorio
+    [Cc]heck) # Si elegimos check le diremos que chekee el directorio, [Cc] le indicamos que acepte tanto mayuscula como minuscula.
         echo "Comprobando la(s) carpeta(s)."
         i=0
         while [ $i -lt ${#dirs[*]} ]
@@ -38,5 +37,5 @@ case $1 in
             fi
     done;;
     
-    *) echo "ERROR: Debes indicar check o make";; # Informamos de error si no decimos nada
+    *) echo "ERROR: Debes indicar check o make";; # Informamos de error si no le indicamos nada
 esac
